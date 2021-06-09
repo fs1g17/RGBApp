@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="@dimen/app_padding"
+    android:id="@+id/background">
+
+    <com.google.android.material.slider.Slider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/red"
+        android:valueFrom="0"
+        android:valueTo="255"
+        android:stepSize="1"
+        app:thumbColor="@color/red"
+        app:trackColor="@color/red_track"
+        app:tickColor="@color/red_track"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/green"/>
+
+    <com.google.android.material.slider.Slider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/green"
+        android:valueFrom="0"
+        android:valueTo="255"
+        android:stepSize="1"
+        app:thumbColor="@color/green"
+        app:trackColor="@color/green_track"
+        app:tickColor="@color/green_track"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/red"/>
+
+    <com.google.android.material.slider.Slider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blue"
+        android:valueFrom="0"
+        android:valueTo="255"
+        android:stepSize="1"
+        app:thumbColor="@color/blue"
+        app:trackColor="@color/blue_track"
+        app:tickColor="@color/blue_track"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/green"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_box"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAlignment="center"/>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
